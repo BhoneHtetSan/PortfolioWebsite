@@ -5,6 +5,40 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 
 <head>
+	<script>
+		// Define dataLayer and the gtag function.
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+	  
+		// Stricter consent for GDPR regions (EU, UK, etc.)
+		gtag('consent', 'default', {
+		  'ad_storage': 'denied',
+		  'ad_user_data': 'denied',
+		  'ad_personalization': 'denied',
+		  'analytics_storage': 'denied',
+		  'regions': ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'GB']
+		});
+	  
+		// Default consent settings for Myanmar and other countries
+		gtag('consent', 'default', {
+		  'ad_storage': 'granted',  // Adjust if you allow ads in Myanmar
+		  'ad_user_data': 'granted',
+		  'ad_personalization': 'granted',
+		  'analytics_storage': 'granted',
+		  'regions': ['MM', 'US', 'CA', 'AU', 'SG', 'TH', 'MY', 'VN', 'ID', 'IN', 'PH']
+		});
+	  
+		// Fallback for all other countries (if needed)
+		gtag('consent', 'default', {
+		  'ad_storage': 'denied',
+		  'ad_user_data': 'denied',
+		  'ad_personalization': 'denied',
+		  'analytics_storage': 'denied'
+		});
+	  </script>
+	  
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/3e9ff36951d6c6ba74844c334e366e1c.js"></script>
+		
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2EDPDEV6DX"></script>
@@ -15,6 +49,7 @@
 
   gtag('config', 'G-2EDPDEV6DX');
 </script>
+
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
