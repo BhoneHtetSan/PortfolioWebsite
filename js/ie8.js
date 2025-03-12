@@ -3,18 +3,23 @@ jQuery(document).ready(function(){
     jQuery('body').html('<div class="ie8"><span>Hi! Please, use the latest version of the browser in order to visit current page</span></div>');
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const iframes = document.querySelectorAll("iframe");
-
-    iframes.forEach((iframe) => {
-        iframe.addEventListener("load", function () {
-            iframe.addEventListener("mouseenter", function () {
-                document.body.classList.add("disable-cursor-effect");
-            });
-
-            iframe.addEventListener("mouseleave", function () {
-                document.body.classList.remove("disable-cursor-effect");
-            });
-        });
+$(document).ready(function () {
+    $(".owl-carousel").owlCarousel({
+        loop: false, // Disable looping
+        nav: true, // Enable navigation arrows
+        dots: true, // Enable pagination dots
+        items: 1, // Number of items to display at a time
+        autoplay: false, // Disable autoplay (optional)
+        responsive: {
+            0: {
+                items: 1 // Number of items for small screens
+            },
+            768: {
+                items: 2 // Number of items for medium screens
+            },
+            1024: {
+                items: 3 // Number of items for large screens
+            }
+        }
     });
 });
