@@ -15,6 +15,10 @@ body {
     background-position: center center;
     background-attachment: fixed;
 }
+.img_holder iframe {
+    border: none; /* Remove iframe border */
+}
+
 body::before {
     content: '';
     position: fixed;

@@ -2199,6 +2199,11 @@ a:focus {
 /*	23) Light Version
 /*------------------------------------------------------------------*/
 body.light{background-color: #fff;color: #777;}
+/* Disable cursor effect when iframe is hovered */
+body.disable-cursor-effect .frenify-cursor {
+    opacity: 0 !important; /* Hide the cursor effect */
+    visibility: hidden !important;
+}
 body.light h1,
 body.light h2,
 body.light h3,
@@ -2420,6 +2425,9 @@ body.light .resumo_fn_modalbox .modal_content::-webkit-scrollbar-thumb{border-co
     background-color: #888;
     transition: all 300ms ease;
     perspective: 30px;
+}
+.frenify-cursor {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 .resumo_fn_modalbox .closer span:after{
 	transform: rotate(45deg) translateZ(0);
