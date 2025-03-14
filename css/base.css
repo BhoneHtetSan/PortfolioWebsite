@@ -7,6 +7,18 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	vertical-align: baseline;
 	outline: none;
 }
+
+.click-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: transparent;
+    cursor: pointer;
+}
+
 body {
     background-image: 
         linear-gradient(to right, rgb(37, 37, 37) 0.01px, transparent 1px),
